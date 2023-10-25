@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  main:
+    web-application-type: reactive
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+        - id: NIMADUR-SERVICE
+          uri: lb://NIMADUR-SERVICE
+          predicates:
+            - Path=/api/v1/nimadur/**
+        - id: NIMADIR-SERVICE
+          uri: lb://NIMADIR-SERVICE
+          predicates:
+            - Path=/api/v1/nimadir/**
+
+eureka:
+  client:
+    service-url:
+      defaultUrl: ${EUREKA_URI:http://localhost:8761/eureka/}
+    instance:
+      preferIpAddress: true
