@@ -14,10 +14,9 @@ import java.util.UUID;
 @Setter
 @Builder
 public class UserEntity extends BaseEntity {
-
     private String name;
+    private String surName;
     private String phoneNumber;
     private String email;
     private UserRole role;
-
 }
