@@ -3,6 +3,8 @@ package uz.pdp.parentservice.entity;
 import jakarta.persistence.Entity;
 import lombok.*;
 
+import java.util.UUID;
+
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -10,10 +12,6 @@ import lombok.*;
 @Setter
 @Builder
 public class ParentEntity extends BaseEntity {
-
-    private String name;
-    private String phoneNumber;
-    private String email;
-    private UserRole role;
+    private UUID childId;
 
 }

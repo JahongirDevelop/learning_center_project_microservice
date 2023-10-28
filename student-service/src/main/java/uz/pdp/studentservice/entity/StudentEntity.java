@@ -11,9 +11,6 @@ import lombok.*;
 @Builder
 public class StudentEntity extends BaseEntity {
 
-    private String name;
-    private String phoneNumber;
-    private String email;
-    private UserRole role;
+    private int rating; // baholash
 
 }
