@@ -1,0 +1,29 @@
+server:
+  port: 8083
+
+
+spring:
+  application:
+    name: O'ZINING_NOMI-SERVICE
+  datasource:
+    url: jdbc:postgresql://localhost:5432/payment_service_db
+    username: postgres
+    password: 2004
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        show_sql: true
+        format_sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultUrl : ${EUREKA_URI:http://localhost:8761/eureka/}
+    instance:
+      preferIpAddress: true
+
+
