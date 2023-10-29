@@ -9,14 +9,14 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: NIMADUR-SERVICE
-          uri: lb://NIMADUR-SERVICE
+        - id: USER-SERVICE
+          uri: lb://USER-SERVICE
           predicates:
-            - Path=/api/v1/nimadur/**
-        - id: NIMADIR-SERVICE
-          uri: lb://NIMADIR-SERVICE
-          predicates:
-            - Path=/api/v1/nimadir/**
+            - Path=/api/v1/users/**
+#        - id: NIMADIR-SERVICE
+#          uri: lb://NIMADIR-SERVICE
+#          predicates:
+#            - Path=/api/v1/nimadir/**
 
 eureka:
   client:
