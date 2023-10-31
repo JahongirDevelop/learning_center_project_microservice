@@ -4,9 +4,9 @@ server:
 
 spring:
   application:
-    name: O'ZINING_NOMI-SERVICE
+    name: STUDENT-SERVICE
   datasource:
-    url: jdbc:postgresql://localhost:5432/payment_service_db
+    url: jdbc:postgresql://localhost:5432/student_service_db
     username: postgres
     password: 2004
     driver-class-name: org.postgresql.Driver
