@@ -4,9 +4,9 @@ server:
 
 spring:
   application:
-    name: O'ZINING_NOMI-SERVICE
+    name: USER-SERVICE
   datasource:
-    url: jdbc:postgresql://localhost:5432/payment_service_db
+    url: jdbc:postgresql://localhost:5432/user_service_db
     username: postgres
     password: 2004
     driver-class-name: org.postgresql.Driver
@@ -27,3 +27,8 @@ eureka:
       preferIpAddress: true
 
 
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: dock

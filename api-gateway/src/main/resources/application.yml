@@ -13,10 +13,10 @@ spring:
           uri: lb://USER-SERVICE
           predicates:
             - Path=/api/v1/users/**
-#        - id: NIMADIR-SERVICE
-#          uri: lb://NIMADIR-SERVICE
-#          predicates:
-#            - Path=/api/v1/nimadir/**
+        - id: STUDENT-SERVICE
+          uri: lb://STUDENT-SERVICE
+          predicates:
+            - Path=/api/v1/students/**
 
 eureka:
   client:
