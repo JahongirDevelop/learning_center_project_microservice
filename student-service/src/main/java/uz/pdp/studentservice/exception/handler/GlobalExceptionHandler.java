@@ -2,8 +2,9 @@ package uz.pdp.studentservice.exception.handler;
 
 
 
-import jakarta.persistence.NonUniqueResultException;
+
 import jakarta.servlet.http.HttpServletRequest;
+import org.hibernate.NonUniqueResultException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
