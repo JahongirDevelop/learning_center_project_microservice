@@ -54,10 +54,6 @@ public class StudentService {
 
     }
 
-    public UserResponse getUser(UUID id) {
-        return apiService.getObject(USER_SERVICE + "/" + id, UserResponse.class);
-    }
-
     public List<StudentResponse> getAll() {
         List<StudentResponse> studentResponses = new ArrayList<>();
 
@@ -83,5 +79,9 @@ public class StudentService {
                 () -> new DataNotFoundException("user not found" + userId));
     }
 
+
+    public UserResponse getUser(UUID id) {
+        return apiService.getObject(USER_SERVICE + "/" + id, UserResponse.class);
+    }
 
 }
