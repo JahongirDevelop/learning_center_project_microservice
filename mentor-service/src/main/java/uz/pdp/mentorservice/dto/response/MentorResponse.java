@@ -14,6 +14,7 @@ import java.util.UUID;
 @Getter
 @Setter
 public class MentorResponse {
+    private String name;
 
     private int experience;
     private Double salary;

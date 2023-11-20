@@ -79,7 +79,6 @@ public class StudentService {
                 () -> new DataNotFoundException("user not found" + userId));
     }
 
-
     public UserResponse getUser(UUID id) {
         return apiService.getObject(USER_SERVICE + "/" + id, UserResponse.class);
     }

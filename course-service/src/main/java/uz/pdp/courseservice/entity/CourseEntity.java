@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
 @Builder
 public class CourseEntity extends BaseEntity {
     private String name;
+    private String description;
     private LocalDateTime startDate;
     private LocalDateTime endDate;
 }

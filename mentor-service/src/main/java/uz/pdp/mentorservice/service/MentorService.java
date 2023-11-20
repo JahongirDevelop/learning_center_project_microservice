@@ -34,7 +34,6 @@ public class MentorService {
     }
 
     public MentorResponse findById(UUID id) {
-
         return modelMapper.map(mentorRepository.findById(id).get(), MentorResponse.class);
     }
 }

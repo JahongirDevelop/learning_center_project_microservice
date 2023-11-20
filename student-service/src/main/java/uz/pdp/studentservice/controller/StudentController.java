@@ -6,12 +6,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import uz.pdp.studentservice.dto.request.StudentCR;
 import uz.pdp.studentservice.dto.response.StudentResponse;
-
 import uz.pdp.studentservice.service.StudentService;
-
 import java.util.List;
-
-
 
 @RestController
 @RequiredArgsConstructor
