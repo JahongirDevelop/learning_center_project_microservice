@@ -37,4 +37,8 @@ public class LessonService {
     public LessonResponse findById(UUID id) {
         return modelMapper.map(lessonRepository.findById(id).get(), LessonResponse.class);
     }
+
+    public List<LessonEntity> getLesson(UUID groupId) {
+        return lessonRepository.findLessonsByGroup_Id(groupId);
+    }
 }

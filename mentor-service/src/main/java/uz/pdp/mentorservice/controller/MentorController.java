@@ -17,12 +17,12 @@ import java.util.UUID;
 public class MentorController {
     private final MentorService mentorService;
 
-    @PostMapping
+    @PostMapping("/create")
     public MentorResponse create(@RequestBody MentorCR productCR) {
         return mentorService.create(productCR);
     }
 
-    @GetMapping
+    @GetMapping("/create")
     public List<MentorResponse> getAll(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "20") int size) {

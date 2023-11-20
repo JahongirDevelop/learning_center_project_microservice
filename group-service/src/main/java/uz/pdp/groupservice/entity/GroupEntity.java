@@ -1,5 +1,6 @@
 package uz.pdp.groupservice.entity;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
@@ -17,14 +18,16 @@ import java.util.List;
 @Builder
 public class GroupEntity extends BaseEntity {
     private String groupName;
+
     @Max(value = 20, message = "20 tadan ko'p bola xonaga sig'maydi")
     @Min(value = 10, message = "10 ta bolaga dars o'tish qoplamaydi")
     private Integer studentCount;
 
-    @ManyToOne
+
+    @ManyToOne(cascade = CascadeType.PERSIST) // or CascadeType.ALL
     private CourseEntity course;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST) // or CascadeType.ALL
     private MentorEntity mentorEntity;
 
     @OneToMany

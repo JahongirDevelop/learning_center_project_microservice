@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/course-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/group-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/group-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/learning_center_project.iml" filepath="$PROJECT_DIR$/.idea/learning_center_project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lesson-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lesson-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mentor-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/mentor-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/student-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/student-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/user-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/user-service.main.iml" />
     </modules>
   </component>
