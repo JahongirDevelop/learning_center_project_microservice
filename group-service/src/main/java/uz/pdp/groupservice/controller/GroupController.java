@@ -1,16 +1,17 @@
 package uz.pdp.groupservice.controller;
 
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import uz.pdp.groupservice.dto.request.GroupCreateDTO;
+import uz.pdp.groupservice.dto.request.UpdateGroupDto;
 import uz.pdp.groupservice.dto.response.GroupResponse;
 import uz.pdp.groupservice.entity.GroupEntity;
 import uz.pdp.groupservice.service.GroupService;
+
+
 
 @RestController
 @RequiredArgsConstructor
@@ -23,6 +24,13 @@ public class GroupController {
         return ResponseEntity.status(200).body(groupService.create(groupCreateDTO));
     }
 
+//    @PutMapping("/update{groupId}")
+//    public ResponseEntity<GroupResponse> update(@PathVariable @NotNull UUID groupId,
+//                                                @Valid @RequestBody UpdateGroupDto updateGroupDto){
+//
+//        return ResponseEntity.status(200).body(groupService.update(groupId, updateGroupDto));
+//
+//    }
 //    public ResponseEntity<StudentResponse> create(@Valid @RequestBody StudentCR studentCR) {
 //        return ResponseEntity.status(200).body(studentService.create(studentCR));
 //    }

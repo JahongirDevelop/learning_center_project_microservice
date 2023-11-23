@@ -9,6 +9,7 @@ import jakarta.validation.constraints.Min;
 import lombok.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @Entity
 @AllArgsConstructor
@@ -24,11 +25,11 @@ public class GroupEntity extends BaseEntity {
     private Integer studentCount;
 
 
-    @ManyToOne(cascade = CascadeType.PERSIST) // or CascadeType.ALL
-    private CourseEntity course;
+    private UUID courseId;
 
-    @ManyToOne(cascade = CascadeType.PERSIST) // or CascadeType.ALL
-    private MentorEntity mentorEntity;
+    //must be removed
+
+    private UUID mentorId;
 
     @OneToMany
     private List<LessonEntity> lessons;
