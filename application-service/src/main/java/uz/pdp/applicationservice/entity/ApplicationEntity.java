@@ -17,5 +17,4 @@ public class ApplicationEntity extends BaseEntity{
     private String phoneNumber;
     private String email;
     private UUID courseId;
-
 }

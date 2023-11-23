@@ -1,12 +1,12 @@
 package uz.pdp.groupservice.dto.response;
 
 import lombok.*;
-import uz.pdp.groupservice.entity.CourseEntity;
 import uz.pdp.groupservice.entity.GroupStatus;
 import uz.pdp.groupservice.entity.LessonEntity;
-import uz.pdp.groupservice.entity.MentorEntity;
 
 import java.util.List;
+import java.util.UUID;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -15,8 +15,8 @@ import java.util.List;
 public class GroupResponse {
     private String groupName;
     private Integer studentCount;
-    private CourseEntity course;
-    private MentorEntity mentorEntity;
+    private UUID courseId;
+    private UUID mentorId;
     private List<LessonEntity> lessons;
     private GroupStatus status;
 }
