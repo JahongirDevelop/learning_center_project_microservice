@@ -9,7 +9,7 @@ import java.util.UUID;
 
 @Repository
 public interface LessonRepository extends JpaRepository<LessonEntity, UUID> {
-    List<LessonEntity> findLessonsByGroup_Id(UUID groupId);
+    List<LessonEntity> findLessonsByGroupId(UUID groupId);
 
 
 }

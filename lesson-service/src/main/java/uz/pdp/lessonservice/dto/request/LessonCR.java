@@ -4,8 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import uz.pdp.lessonservice.entity.GroupEntity;
 import uz.pdp.lessonservice.entity.LessonStatus;
+
+import java.util.UUID;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -13,7 +14,7 @@ import uz.pdp.lessonservice.entity.LessonStatus;
 @Setter
 public class LessonCR {
 
-    private GroupEntity group;
+    private UUID groupId;
     private Integer lessonNumber;
     private LessonStatus lessonStatus;
 

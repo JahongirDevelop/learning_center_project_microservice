@@ -1,9 +1,6 @@
 package uz.pdp.groupservice.entity;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import lombok.*;
@@ -23,16 +20,9 @@ public class GroupEntity extends BaseEntity {
     @Max(value = 20, message = "20 tadan ko'p bola xonaga sig'maydi")
     @Min(value = 10, message = "10 ta bolaga dars o'tish qoplamaydi")
     private Integer studentCount;
-
-
     private UUID courseId;
-
-    //must be removed
-
     private UUID mentorId;
 
-    @OneToMany
-    private List<LessonEntity> lessons;
-
+    @Enumerated(EnumType.STRING)
     private GroupStatus status;
 }
