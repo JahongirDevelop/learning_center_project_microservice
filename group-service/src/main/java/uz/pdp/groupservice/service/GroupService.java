@@ -36,13 +36,11 @@ public class GroupService {
         }
 
         GroupResponse group = new GroupResponse();
-        List<LessonEntity> lessons = new ArrayList<>();
         group.setGroupName(dto.getGroupName());
         group.setStudentCount(20);
         group.setCourseId(dto.getCourseId());
         System.out.println("group.getCourseId() = " + group.getCourseId());
         group.setMentorId(dto.getMentorId());
-        group.setLessons(lessons);
         group.setStatus(GroupStatus.CREATED);
         groupRepository.save(modelMapper.map(group, GroupEntity.class));
         return group;

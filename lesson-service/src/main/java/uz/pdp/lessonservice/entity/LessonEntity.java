@@ -1,7 +1,11 @@
 package uz.pdp.lessonservice.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import lombok.*;
+
+import java.util.UUID;
 
 @Entity
 @AllArgsConstructor
@@ -10,7 +14,8 @@ import lombok.*;
 @Setter
 @Builder
 public class LessonEntity extends BaseEntity {
-    private GroupEntity group;
+    private UUID groupId;
     private Integer lessonNumber;
+    @Enumerated(EnumType.STRING)
     private LessonStatus lessonStatus;
 }

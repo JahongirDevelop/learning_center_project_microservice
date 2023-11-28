@@ -6,8 +6,6 @@ import org.modelmapper.TypeToken;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import uz.pdp.lessonservice.dto.request.LessonCR;
 import uz.pdp.lessonservice.dto.response.LessonResponse;
 import uz.pdp.lessonservice.entity.LessonEntity;
@@ -39,6 +37,6 @@ public class LessonService {
     }
 
     public List<LessonEntity> getLesson(UUID groupId) {
-        return lessonRepository.findLessonsByGroup_Id(groupId);
+        return lessonRepository.findLessonsByGroupId(groupId);
     }
 }
