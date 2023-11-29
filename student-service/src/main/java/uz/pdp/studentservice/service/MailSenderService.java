@@ -17,9 +17,8 @@ public class MailSenderService {
     @Value("${spring.mail.username}")
     private String sender;
 
-    public String sendVerificationCode(String email) {
-        Random random = new Random();
-        String verificationCode = String.valueOf(random.nextInt(90000) + 10000);
+    public String sendVerificationCode(String email,String verificationCode) {
+
         try {
             String message = "This is your verification code: " + verificationCode;
             SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
