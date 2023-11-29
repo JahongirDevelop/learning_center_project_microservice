@@ -28,6 +28,7 @@ public class StudentService {
     private final ModelMapper modelMapper;
     private final String APPLICATION_SERVICE = "http://APPLICATION-SERVICE/api/v1/applications";
     private final String GROUP_SERVICE = "http://GROUP-SERVICE/api/v1/groups";
+    private final MailSenderService senderService;
 
 
     public StudentResponse create(StudentCR  studentCR) {
@@ -53,6 +54,7 @@ public class StudentService {
                     .rating(0)
                     .groupId(studentCR.getGroupId())
                     .build();
+            senderService.sendVerificationCode(studentEntity.getEmail());
             studentRepository.save(studentEntity);
             return modelMapper.map(studentEntity, StudentResponse.class);
 
