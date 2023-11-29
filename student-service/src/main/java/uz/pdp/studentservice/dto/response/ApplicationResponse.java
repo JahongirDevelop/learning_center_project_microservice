@@ -1,18 +1,20 @@
 package uz.pdp.studentservice.dto.response;
 
 import lombok.*;
-import uz.pdp.studentservice.entity.UserRole;
+
+import java.util.UUID;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @Builder
-public class UserResponse {
+public class ApplicationResponse {
     private String name;
-    private String surName;
+    private String surname;
     private String phoneNumber;
     private String email;
     private String password;
-    private UserRole role;
+    private UUID groupId;
+
 }

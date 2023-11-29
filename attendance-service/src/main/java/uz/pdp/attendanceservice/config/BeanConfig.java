@@ -1,8 +1,7 @@
-package uz.pdp.applicationservice.config;
+package uz.pdp.attendanceservice.config;
 
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
-import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,7 +20,6 @@ public class BeanConfig {
     @Bean
     @LoadBalanced
     public RestTemplate restTemplate() {
-        return new RestTemplateBuilder().build();
+        return new RestTemplate();
     }
-
 }

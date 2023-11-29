@@ -12,9 +12,10 @@ import java.util.UUID;
 @Setter
 @Builder
 public class ApplicationEntity extends BaseEntity{
+
     private String name;
     private String surname;
     private String phoneNumber;
     private String email;
-    private UUID courseId;
+    private UUID groupId;
 }

@@ -11,6 +11,7 @@ import uz.pdp.groupservice.dto.response.GroupResponse;
 import uz.pdp.groupservice.entity.GroupEntity;
 import uz.pdp.groupservice.service.GroupService;
 
+import java.util.UUID;
 
 
 @RestController
@@ -23,6 +24,13 @@ public class GroupController {
     public ResponseEntity<GroupResponse> create(@Valid @RequestBody GroupCreateDTO groupCreateDTO) {
         return ResponseEntity.status(200).body(groupService.create(groupCreateDTO));
     }
+
+    @GetMapping("/{id}")
+    public GroupResponse getGroup(@PathVariable UUID id){
+        return groupService.findById(id);
+    }
+
+
 
 //    @PutMapping("/update{groupId}")
 //    public ResponseEntity<GroupResponse> update(@PathVariable @NotNull UUID groupId,

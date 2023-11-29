@@ -10,10 +10,11 @@ import java.util.UUID;
 @Getter
 @Builder
 public class ApplicationResponse {
+
     private String name;
     private String surname;
     private String phoneNumber;
     private String email;
-    private UUID courseId;
+    private UUID groupId;
 
 }

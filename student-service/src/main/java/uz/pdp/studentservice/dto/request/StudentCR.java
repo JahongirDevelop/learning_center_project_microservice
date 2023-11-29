@@ -14,7 +14,12 @@ import java.util.UUID;
 @Builder
 public class StudentCR {
     @NotBlank(message = "must not empty")
-    private UUID userId;
+    private UUID applicationId;
     @NotNull(message = "must not null")
     private int rating; // baholash
+    private String name;
+    private String surname;
+    private String phoneNumber;
+    private String email;
+    private UUID groupId;
 }
