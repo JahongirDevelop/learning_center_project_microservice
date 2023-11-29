@@ -15,6 +15,7 @@ import uz.pdp.studentservice.dto.request.StudentCR;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.UUID;
 
 
@@ -42,9 +43,9 @@ public class StudentService {
             throw new DataNotFoundException("group not found");
         }
         else {
-//            if(studentRepository.existsByApplicationId((studentCR.getApplicationId()))) {
-//                throw new DataAlreadyExistsException("application already exits "+ studentCR.getApplicationId());
-//            }
+            Random random = new Random();
+            String verificationCode = String.valueOf(random.nextInt(90000) + 10000);
+            senderService.sendVerificationCode(studentCR.getEmail(),verificationCode);
             StudentEntity studentEntity = StudentEntity.builder()
                     .applicationId(studentCR.getApplicationId())
                     .name(studentCR.getName())
@@ -52,9 +53,10 @@ public class StudentService {
                     .phoneNumber(studentCR.getPhoneNumber())
                     .email(studentCR.getEmail())
                     .rating(0)
+                    .password(verificationCode)
                     .groupId(studentCR.getGroupId())
                     .build();
-            senderService.sendVerificationCode(studentEntity.getEmail());
+
             studentRepository.save(studentEntity);
             return modelMapper.map(studentEntity, StudentResponse.class);
 

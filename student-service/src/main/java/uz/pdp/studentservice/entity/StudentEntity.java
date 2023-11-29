@@ -20,6 +20,7 @@ public class StudentEntity extends BaseEntity {
     private int rating; // baholash
     private String name;
     private String surname;
+    private String password;
     private String phoneNumber;
     private String email;
     private UUID groupId;
