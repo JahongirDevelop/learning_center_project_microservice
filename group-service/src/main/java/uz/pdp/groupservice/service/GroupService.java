@@ -45,6 +45,9 @@ public class GroupService {
         groupRepository.save(modelMapper.map(group, GroupEntity.class));
         return group;
     }
+    public GroupResponse findById(UUID id) {
+        return modelMapper.map(groupRepository.findById(id), GroupResponse.class);
+    }
 
     public GroupResponse update(UUID groupId, UpdateGroupDto updateGroupDto) {
         GroupEntity group = groupRepository.findById(groupId).orElseThrow(
@@ -57,9 +60,7 @@ public class GroupService {
     public List<GroupEntity> getAll(){
         return groupRepository.findAll();
     }
-    public GroupResponse findByID(UUID id) {
-        return modelMapper.map(groupRepository.findById(id).get(), GroupResponse.class);
-    }
+
 
     public CourseResponse getCourse(UUID id) {
         return apiService.getObject(COURSE_SERVICE + "/" + id, CourseResponse.class);

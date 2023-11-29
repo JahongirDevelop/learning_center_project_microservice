@@ -26,6 +26,7 @@ public class ApplicationService {
         return modelMapper.map(applicationRepository.save(applicationEntity), ApplicationResponse.class);
     }
     public List<ApplicationResponse> getAll(int page, int size) {
+
         Pageable pageable = PageRequest.of(page, size);
         List<ApplicationEntity> applications = applicationRepository.findAll(pageable).getContent();
         return modelMapper.map(applications, new TypeToken<List<ApplicationResponse>>(){}.getType());

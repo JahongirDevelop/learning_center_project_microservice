@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/attendance-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/attendance-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/course-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/group-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/group-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/learning_center_project.iml" filepath="$PROJECT_DIR$/.idea/learning_center_project.iml" />

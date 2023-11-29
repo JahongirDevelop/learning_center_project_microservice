@@ -19,7 +19,7 @@ public class ApplicationController {
     public ApplicationResponse create(@RequestBody ApplicationCR applicationCR){
         return applicationService.create(applicationCR);
     }
-    @GetMapping("/get-application/{id}")
+    @GetMapping("/{id}")
     public ApplicationResponse getApplication(@PathVariable UUID id){
         return applicationService.findById(id);
     }

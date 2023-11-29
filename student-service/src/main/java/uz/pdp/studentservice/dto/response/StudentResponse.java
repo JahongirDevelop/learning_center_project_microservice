@@ -1,7 +1,6 @@
 package uz.pdp.studentservice.dto.response;
 
 import lombok.*;
-import uz.pdp.studentservice.entity.UserRole;
 
 import java.util.UUID;
 
@@ -11,11 +10,12 @@ import java.util.UUID;
 @Setter
 @Builder
 public class StudentResponse {
-    private UUID userId;
+    private UUID applicationId;
     private int rating; // baholash
     private String name;
-    private String surName;
+    private String surname;
     private String phoneNumber;
     private String email;
-    private UserRole role;
+    private UUID groupId;
+
 }

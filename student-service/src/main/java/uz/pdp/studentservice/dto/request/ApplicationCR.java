@@ -1,7 +1,8 @@
 package uz.pdp.studentservice.dto.request;
 
 import lombok.*;
-import uz.pdp.studentservice.entity.UserRole;
+
+import java.util.UUID;
 
 
 @AllArgsConstructor
@@ -9,11 +10,13 @@ import uz.pdp.studentservice.entity.UserRole;
 @Getter
 @Setter
 @Builder
-public class UserCR {
+public class ApplicationCR {
+    private UUID applicationId;
     private String name;
-    private String surName;
+    private String surname;
     private String phoneNumber;
     private String email;
     private String password;
-    private UserRole role;
+    private UUID groupId;
+
 }

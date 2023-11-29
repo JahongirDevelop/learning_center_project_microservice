@@ -16,7 +16,12 @@ import java.util.UUID;
 @ToString
 public class StudentEntity extends BaseEntity {
     @Column(unique = true)
-    private UUID userId;
+    private UUID applicationId;
     private int rating; // baholash
+    private String name;
+    private String surname;
+    private String phoneNumber;
+    private String email;
+    private UUID groupId;
 
 }

@@ -9,14 +9,34 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: USER-SERVICE
-          uri: lb://USER-SERVICE
+        - id: ATTENDANCE-SERVICE
+          uri: lb://ATTENDANCE-SERVICE
           predicates:
-            - Path=/api/v1/users/**
+            - Path=/api/v1/attendances/**
+        - id: APPLICATION-SERVICE
+          uri: lb://APPLICATION-SERVICE
+          predicates:
+            - Path=/api/v1/applications/**
         - id: STUDENT-SERVICE
           uri: lb://STUDENT-SERVICE
           predicates:
             - Path=/api/v1/students/**
+        - id: COURSE-SERVICE
+          uri: lb://COURSE-SERVICE
+          predicates:
+            - Path=/api/v1/courses/**
+        - id: GROUP-SERVICE
+          uri: lb://GROUP-SERVICE
+          predicates:
+            - Path=/api/v1/groups/**
+        - id: MENTOR-SERVICE
+          uri: lb://MENTOR-SERVICE
+          predicates:
+            - Path=/api/v1/mentors/**
+        - id: LESSON-SERVICE
+          uri: lb://LESSON-SERVICE
+          predicates:
+            - Path=/api/v1/lessons/**
 
 eureka:
   client:
