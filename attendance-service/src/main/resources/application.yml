@@ -7,8 +7,8 @@ spring:
     name: ATTENDANCE-SERVICE
   datasource:
     url: jdbc:postgresql://localhost:5432/attendance_service_db
-    username: postgres
-    password: 2004
+     username: // your usernmae 
+    password: // your password
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
