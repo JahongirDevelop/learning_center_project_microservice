@@ -7,8 +7,8 @@ spring:
     name: O'ZINING_NOMI-SERVICE
   datasource:
     url: jdbc:postgresql://localhost:5432/payment_service_db
-    username: postgres
-    password: 2004
+     username: // your usernmae 
+    password: // your password
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
